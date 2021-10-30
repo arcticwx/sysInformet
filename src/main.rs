@@ -1,8 +1,22 @@
+use std::io;
+use std::io::prelude::*;
 use std::env;
 use sysinfo::{NetworkExt, NetworksExt, ProcessExt, System, SystemExt};
 
 //TODO: REFORMAT DESIGN
 //TODO: Add More. 
+
+fn pause() {
+    //credit for pause function goes to 'DroidLogician' on users.rust-lang.org 
+    let mut stdin = io::stdin();
+    let mut stdout = io::stdout();
+
+    write!(stdout, "Press enter to continue...").unwrap();
+    stdout.flush().unwrap();
+
+    let _ = stdin.read(&mut [0u8]).unwrap();
+}
+
 
 fn main() {
     let mut sys = System::new_all();
@@ -22,4 +36,5 @@ fn main() {
     println!("\n");
     println!("\n");
     println!("\n");
+    pause();
 }
