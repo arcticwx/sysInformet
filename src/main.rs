@@ -1,7 +1,7 @@
 use std::io;
 use std::io::prelude::*;
 use std::env;
-use sysinfo::{NetworkExt, NetworksExt, ProcessExt, System, SystemExt};
+use sysinfo::{System, SystemExt};
 
 //TODO: REFORMAT DESIGN -- Semi Done
 //TODO: Add More. 
